@@ -55,7 +55,11 @@ public class GooglePhotosClient {
         connection.setRequestMethod("POST");
         connection.setDoOutput(true); // Triggers POST.
 
+				// TODO get albumid from api albums.list
+        String albumID = "";
+
         String json = "{\n" +
+                "\"albumId\": \"" + albumID + "\",\n"+
                 "  \"newMediaItems\": [\n" +
                 "    {\n" +
                 "      \"simpleMediaItem\": {\n" +
